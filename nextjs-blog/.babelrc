@@ -1,4 +1,17 @@
+/* Error :  Props 'className' did not match 
+
+서버측 className과 클라이언트측 className이 불일치로 인한 에러
+
+## 해결방안
+
+- 설치 : npm i babel-plugin-styled-components
+- 설정 : /.bablerc 에서 아래 설정
+  "presets": ["next/babel"],
+  "plugins": ["babel-plugin-styled-components"]
+  
+  ❗️ nextjs에서 바벨 설정을 추가할때는 next/bable 프리셋을 항상 추가해야함
+*/
 {
   "presets": ["next/babel"],
-  "plugins": [["styled-components", { "ssr": true }]]
+  "plugins": ["babel-plugin-styled-components"]
 }

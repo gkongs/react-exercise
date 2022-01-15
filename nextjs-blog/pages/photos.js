@@ -1,21 +1,30 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import { PhotosUl } from '../styles/photos';
 
 function Photos({ photos }) {
   return (
     <>
       <h1>Photos</h1>
-      <ul>
+      <PhotosUl>
         {photos.map(photo => (
-          <li key={photo.id}>
-            <Image
-              src={photo.thumbnailUrl}
-              width={100}
-              height={100}
-              alt={photo.title}
-            />
-          </li>
+          <>
+            <li key={photo.id}>
+              <Link href={`/photos/${photo.id.toString()}`}>
+                <a>
+                  <Image
+                    src={photo.thumbnailUrl}
+                    width={150}
+                    height={150}
+                    alt={photo.title}
+                  />
+                  <span>{photo.title}</span>
+                </a>
+              </Link>
+            </li>
+          </>
         ))}
-      </ul>
+      </PhotosUl>
     </>
   );
 }

@@ -7,10 +7,12 @@ export const NavUl = styled.ul`
   background-color: darkgray;
 `;
 
-export const NavLI = styled.li`
-  list-style: none;
-
+export const NavLi = styled.li`
   * {
     color: white;
+
+    :hover {
+      color: dimgray;
+    }
   }
 `;

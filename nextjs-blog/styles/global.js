@@ -28,4 +28,8 @@ img {
   max-width: 100%;
   display: block;
 }
+
+  li {
+    list-style: none;
+  }
 `;
