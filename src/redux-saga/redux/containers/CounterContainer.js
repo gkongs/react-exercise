@@ -14,7 +14,9 @@ const CounterContainer = () => {
     dispatch(decreaseAsync());
   };
 
-  return <Counter number={number} onIncrease={onIncrease} onDecrease={onDecrease} />;
+  return (
+    <Counter number={number} onIncrease={onIncrease} onDecrease={onDecrease} />
+  );
 };
 
 export default CounterContainer;
