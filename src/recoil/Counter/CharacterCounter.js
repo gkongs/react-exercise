@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRecoilState } from 'recoil';
 import CharacterCount from './CharacterCount';
-import { textState } from './store';
+import { textState } from './states';
 export default function CharacterCounter() {
   return (
     <div>
